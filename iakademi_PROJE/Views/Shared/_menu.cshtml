@@ -1,0 +1,352 @@
+﻿@{ 
+    var kategoriListesi = ViewBag.kategoriler;
+}
+
+
+
+
+    <!-- main menu area start  -->
+<div class="main-menu-area ">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10 col-sm-8 col-md-3 col-lg-3">
+                <div class="menu-cat-area">
+                    <h3 class="nk-module-title"><span>Category</span></h3>
+                    <div class="nk-all-items">
+                        <div class="sp-module-content">
+                            <!-- treeview -->
+                            <div class="vina-treeview-virtuemart" id="vina-treeview-virtuemart93">
+
+                                @*<ul>
+                                    @foreach (var item in kategoriListesi as List<iakademi_PROJE.Models.tbl_Categories>)
+                                    {
+                                        <li>@item.categoryname</li> 
+                                    }
+                                </ul>*@
+
+
+
+                                <ul class="level0 treeview">
+                                    <li>
+                                        <a title="Baby" href="index.html#" class="baby">
+                                            <span class="catTitle ">Baby</span>
+                                        </a>
+                                    </li>
+                                    <li class="expandable">
+                                        <div class="hitarea expandable-hitarea"></div>
+                                        <a title="Camera" href="index.html#" class="camera">
+                                            <span class="catTitle ">Camera &amp; Camcorder</span>
+                                        </a>
+                                        <ul class="sub-menu treeview" style="display:none;">
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <a title="Fashion" href="index.html#" class="">
+                                                    <span class="catTitle ">Fashion</span>
+                                                </a>
+                                                <ul class="sub-menu treeview" style="display:none;">
+                                                    <li>
+                                                        <a title="Cocktail" href="index.html#">
+                                                            <span class="catTitle ">Cocktail</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="Day" href="index.html#">
+                                                            <span class="catTitle ">Day</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="Evening" href="index.html#">
+                                                            <span class="catTitle ">Evening</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="last">
+                                                        <a title="Sports" href="index.html#">
+                                                            <span class="catTitle ">Sports</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <a title="Handbags" href="index.html#">
+                                                    <span class="catTitle ">Handbags</span>
+                                                </a>
+                                                <ul class="sub-menu treeview" style="display:none;">
+                                                    <li>
+                                                        <a title="Sports" href="index.html#">
+                                                            <span class="catTitle ">Sports</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="Run" href="index.html#">
+                                                            <span class="catTitle ">Run</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="Sandals" href="index.html#">
+                                                            <span class="catTitle ">Sandals</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="last">
+                                                        <a title="Books" href="index.html#">
+                                                            <span class="catTitle ">Books</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="expandable">
+                                        <div class="hitarea expandable-hitarea"></div>
+                                        <a title="Destop" href="index.html#" class="destop">
+                                            <span class="catTitle ">Destop &amp; Laptop</span>
+                                        </a>
+                                        <ul class="sub-menu treeview" style="display:none;">
+                                            <li>
+                                                <a title="Smart Toys" href="index.html#">
+                                                    <span class="catTitle ">Smart Toys</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Boys" href="index.html#">
+                                                    <span class="catTitle ">Boys</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Girls" href="index.html#">
+                                                    <span class="catTitle ">Girls</span>
+                                                </a>
+                                            </li>
+                                            <li class="last">
+                                                <a title="Sports" href="index.html#">
+                                                    <span class="catTitle ">Sports</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a title="Fashion" href="index.html#" class="fashion">
+                                            <span class="catTitle ">Fashion &amp; Accessories</span>
+                                        </a>
+                                    </li>
+                                    <li class="expandable">
+                                        <div class="hitarea expandable-hitarea"></div>
+                                        <a title="Furniture" href="index.html#" class="furniture">
+                                            <span class="catTitle ">Furniture</span>
+                                        </a>
+                                        <ul class="sub-menu treeview" style="display:none;">
+                                            <li>
+                                                <a title="Tablet" href="index.html#">
+                                                    <span class="catTitle ">Tablet</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Book Self" href="index.html#">
+                                                    <span class="catTitle ">Book Self </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Girls" href="index.html#">
+                                                    <span class="catTitle ">Girls</span>
+                                                </a>
+                                            </li>
+                                            <li class="last">
+                                                <a title="Sports" href="index.html#">
+                                                    <span class="catTitle ">Sports</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a title="Beauty" href="index.html#" class="beauty">
+                                            <span class="catTitle ">Health &amp; Beauty</span>
+                                        </a>
+                                    </li>
+                                    <li class="expandable">
+                                        <div class="hitarea expandable-hitarea"></div>
+                                        <a title="Houseware" href="index.html#" class="houseware">
+                                            <span class="catTitle ">Houseware</span>
+                                        </a>
+                                        <ul class="sub-menu treeview" style="display:none;">
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <a title="Fashion" href="index.html#" class="">
+                                                    <span class="catTitle ">Fashion</span>
+                                                </a>
+                                                <ul class="sub-menu treeview" style="display:none;">
+                                                    <li>
+                                                        <a title="Cocktail" href="index.html#">
+                                                            <span class="catTitle ">Cocktail</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="Day" href="index.html#">
+                                                            <span class="catTitle ">Day</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="Evening" href="index.html#">
+                                                            <span class="catTitle ">Evening</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="last">
+                                                        <a title="Sports" href="index.html#">
+                                                            <span class="catTitle ">Sports</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a title="tablet" href="index.html#" class="tablet">
+                                            <span class="catTitle ">Mobile &amp; tablet</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a title="toys" href="index.html#" class="toys">
+                                            <span class="catTitle ">toys &amp; gifts</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a title="watches" href="index.html#" class="watches">
+                                            <span class="catTitle ">watches &amp; glasses</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-2 col-sm-3 col-md-9 col-lg-9">
+                <nav>
+                    <ul>
+                        <li class="active">
+                            <a href="@Url.Action("Index","Home")">ANASAYFA</a>
+                            <div class="sp-dropdown-inner">
+                                <ul class="sp-dropdown-items">
+                                    <li class="sp-menu-item"><a href="index.html">Home 1</a></li>
+                                    <li class="sp-menu-item"><a href="index-2.html">Home 2</a></li>
+                                    <li class="sp-menu-item"><a href="index-3.html">Home 3</a></li>
+                                    <li class="sp-menu-item"><a href="index-4.html">Home 4</a></li>
+                                    <li class="sp-menu-item"><a href="index-5.html">Home 5</a></li>
+                                    <li class="sp-menu-item"><a href="index-6.html">Home 6</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="@Url.Action("giris","Home")">GİRİŞ</a></li>
+                        <li><a href="@Url.Action("uyeol","Home")">ÜYE OL</a></li>
+                        <li><a href="@Url.Action("logout","Home")">ÇIKIŞ</a></li>
+                        <li><a href="@Url.Action("hakkimizda","Home")">HAKKIMIZDA</a></li>
+                        <li><a href="@Url.Action("iletişim","Home")">İLETİŞİM</a></li>
+                        <li><a href="@Url.Action("mesaj","Home")">MESAJ</a></li>
+                        <li><a href="@Url.Action("detayliarama","Home")">DETAYLI ARAMA</a></li>
+                        <li><a href="@Url.Action("login","Admin")">YÖNETİM PANELİ GİRİŞİ</a></li>
+
+
+
+                        @*<li>
+                            <a href="">BANA ÖZEL</a>
+                            <div class="sp-dropdown-inner">
+                                <ul class="sp-dropdown-items">
+                                    <li class="sp-menu-item"><a href="blog-post.html">blog post page</a></li>
+                                    <li class="sp-menu-item"><a href="cart.html">cart page</a></li>
+                                    <li class="sp-menu-item"><a href="checkout.html">checkout page</a></li>
+                                    <li class="sp-menu-item"><a href="login.html">login page</a></li>
+                                    <li class="sp-menu-item"><a href="shop.html">shop page</a></li>
+                                    <li class="sp-menu-item"><a href="single-product.html">single product page</a></li>
+                                    <li class="sp-menu-item"><a href="wishlist.html">wishlist</a></li>
+                                </ul>
+                            </div>
+                        </li>*@
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main menu area end  -->
+<!-- mobile-menu-area start -->
+<div class="mobile-menu-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mobile-menu">
+                    <nav id="dropdown">
+                        <ul>
+                            <li>
+                                <a href="index.html">Home2</a>
+                                <ul>
+                                    <li><a href="index.html">Home 1</a></li>
+                                    <li><a href="index-2.html">Home 2</a></li>
+                                    <li><a href="index-3.html">Home 3</a></li>
+                                    <li><a href="index-4.html">Home 4</a></li>
+                                    <li><a href="index-5.html">Home 5</a></li>
+                                    <li><a href="index-6.html">Home 6</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li>
+                                <a href="index.html#">Pages</a>
+                                <ul>
+                                    <li><a href="blog-post.html">blog post page</a></li>
+                                    <li><a href="cart.html">cart page</a></li>
+                                    <li><a href="checkout.html">checkout page</a></li>
+                                    <li><a href="login.html">login page</a></li>
+                                    <li><a href="shop.html">shop page</a></li>
+                                    <li><a href="single-product.html">single product page</a></li>
+                                    <li><a href="wishlist.html">wishlist</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="corporate.html">Corporate</a></li>
+                            <li><a href="@Url.Action("login","Admin")">YÖNETİM PANELİ GİRİŞİ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- mobile-menu-area end -->
+<!-- search area start  -->
+<div class="nk-search-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                <div class="nk-search">
+                    <div class="select-wrapper">
+                        <select class="select-nksearch">
+                            <option selected="selected">All Categories</option>
+                            <option>Baby</option>
+                            <option>Camera &amp; Camcorder</option>
+                            <option>-- Bags</option>
+                            <option>---- Blazers</option>
+                            <option>---- Bootees  Bags</option>
+                            <option>---- Coats &amp; Jackets</option>
+                            <option>Fashion &amp; Accessories</option>
+                            <option>-- Rings</option>
+                            <option>---- Diamond Bracelets</option>
+                            <option>Health &amp; Beauty</option>
+                            <option>-- Clothing</option>
+                            <option>-- Handbags</option>
+                            <option>---- Kids</option>
+                            <option>---- Sandals</option>
+                        </select>
+                    </div>
+                    <div class="search_input">
+                        <input type="text" placeholder="Type and hit enter" />
+                        <div class="search-button-wrapper">
+                            <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main menu area end  -->

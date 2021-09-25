@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="iakademi9_PROJEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_Categories">
+          <Key>
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="categoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="parentID" Type="int" />
+          <Property Name="categoryname" Type="nvarchar" MaxLength="100" />
+          <Property Name="aktif" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_Products">
+          <Key>
+            <PropertyRef Name="productID" />
+          </Key>
+          <Property Name="productID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="urunkodu" Type="nvarchar" MaxLength="5" />
+          <Property Name="productname" Type="nvarchar" MaxLength="100" />
+          <Property Name="price" Type="decimal" Precision="11" Scale="2" />
+          <Property Name="categoryID" Type="int" />
+          <Property Name="supplierID" Type="int" />
+          <Property Name="stock" Type="bigint" />
+          <Property Name="discount" Type="int" />
+          <Property Name="status" Type="int" />
+          <Property Name="adddate" Type="datetime" />
+          <Property Name="keywords" Type="nvarchar(max)" />
+          <Property Name="desidegeri" Type="int" />
+          <Property Name="kdv" Type="int" />
+          <Property Name="onecikanlar" Type="int" />
+          <Property Name="coksatanlar" Type="int" />
+          <Property Name="bunabakan" Type="int" />
+          <Property Name="notes" Type="nvarchar(max)" />
+          <Property Name="photopath" Type="nvarchar(max)" />
+          <Property Name="aktif" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_Suppliers">
+          <Key>
+            <PropertyRef Name="supplierID" />
+          </Key>
+          <Property Name="supplierID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="brandname" Type="nvarchar" MaxLength="100" />
+          <Property Name="aktif" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_Users">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" MaxLength="150" />
+          <Property Name="name_surname" Type="nvarchar" MaxLength="100" />
+          <Property Name="telefon" Type="nvarchar" MaxLength="10" />
+          <Property Name="faturaadresi" Type="nvarchar(max)" />
+          <Property Name="adminmi" Type="bit" />
+          <Property Name="aktif" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="iakademi9_PROJEModelStoreContainer">
+          <EntitySet Name="tbl_Categories" EntityType="Self.tbl_Categories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Products" EntityType="Self.tbl_Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Suppliers" EntityType="Self.tbl_Suppliers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Users" EntityType="Self.tbl_Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="iakademi9_PROJEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_Categories">
+          <Key>
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="categoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="parentID" Type="Int32" />
+          <Property Name="categoryname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="aktif" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_Products">
+          <Key>
+            <PropertyRef Name="productID" />
+          </Key>
+          <Property Name="productID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="urunkodu" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="productname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Decimal" Precision="11" Scale="2" />
+          <Property Name="categoryID" Type="Int32" />
+          <Property Name="supplierID" Type="Int32" />
+          <Property Name="stock" Type="Int64" />
+          <Property Name="discount" Type="Int32" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="adddate" Type="DateTime" Precision="3" />
+          <Property Name="keywords" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="desidegeri" Type="Int32" />
+          <Property Name="kdv" Type="Int32" />
+          <Property Name="onecikanlar" Type="Int32" />
+          <Property Name="coksatanlar" Type="Int32" />
+          <Property Name="bunabakan" Type="Int32" />
+          <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="photopath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="aktif" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_Suppliers">
+          <Key>
+            <PropertyRef Name="supplierID" />
+          </Key>
+          <Property Name="supplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="brandname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="aktif" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_Users">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="name_surname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="telefon" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="faturaadresi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="adminmi" Type="Boolean" />
+          <Property Name="aktif" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="iakademi9_PROJEEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Categories" EntityType="Self.tbl_Categories" />
+          <EntitySet Name="tbl_Products" EntityType="Self.tbl_Products" />
+          <EntitySet Name="tbl_Suppliers" EntityType="Self.tbl_Suppliers" />
+          <EntitySet Name="tbl_Users" EntityType="Self.tbl_Users" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="iakademi9_PROJEModelStoreContainer" CdmEntityContainer="iakademi9_PROJEEntities">
+          <EntitySetMapping Name="tbl_Categories">
+            <EntityTypeMapping TypeName="iakademi9_PROJEModel.tbl_Categories">
+              <MappingFragment StoreEntitySet="tbl_Categories">
+                <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+                <ScalarProperty Name="parentID" ColumnName="parentID" />
+                <ScalarProperty Name="categoryname" ColumnName="categoryname" />
+                <ScalarProperty Name="aktif" ColumnName="aktif" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Products">
+            <EntityTypeMapping TypeName="iakademi9_PROJEModel.tbl_Products">
+              <MappingFragment StoreEntitySet="tbl_Products">
+                <ScalarProperty Name="productID" ColumnName="productID" />
+                <ScalarProperty Name="urunkodu" ColumnName="urunkodu" />
+                <ScalarProperty Name="productname" ColumnName="productname" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+                <ScalarProperty Name="supplierID" ColumnName="supplierID" />
+                <ScalarProperty Name="stock" ColumnName="stock" />
+                <ScalarProperty Name="discount" ColumnName="discount" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="adddate" ColumnName="adddate" />
+                <ScalarProperty Name="keywords" ColumnName="keywords" />
+                <ScalarProperty Name="desidegeri" ColumnName="desidegeri" />
+                <ScalarProperty Name="kdv" ColumnName="kdv" />
+                <ScalarProperty Name="onecikanlar" ColumnName="onecikanlar" />
+                <ScalarProperty Name="coksatanlar" ColumnName="coksatanlar" />
+                <ScalarProperty Name="bunabakan" ColumnName="bunabakan" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+                <ScalarProperty Name="photopath" ColumnName="photopath" />
+                <ScalarProperty Name="aktif" ColumnName="aktif" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Suppliers">
+            <EntityTypeMapping TypeName="iakademi9_PROJEModel.tbl_Suppliers">
+              <MappingFragment StoreEntitySet="tbl_Suppliers">
+                <ScalarProperty Name="supplierID" ColumnName="supplierID" />
+                <ScalarProperty Name="brandname" ColumnName="brandname" />
+                <ScalarProperty Name="aktif" ColumnName="aktif" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Users">
+            <EntityTypeMapping TypeName="iakademi9_PROJEModel.tbl_Users">
+              <MappingFragment StoreEntitySet="tbl_Users">
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="name_surname" ColumnName="name_surname" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="faturaadresi" ColumnName="faturaadresi" />
+                <ScalarProperty Name="adminmi" ColumnName="adminmi" />
+                <ScalarProperty Name="aktif" ColumnName="aktif" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Anasayfa";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+
+
+<div class="row" id="sortable_portlets">
+    <div class="col-md-4 column sortable">
+        <div class="portlet portlet-sortable light bordered">
+            <div class="portlet-title tabbable-line">
+                <div class="caption">
+                    <i class="icon-pin font-yellow-lemon"></i>
+                    <span class="caption-subject bold font-yellow-lemon uppercase">
+                        Sipariş Bilgileri
+                    </span>
+                </div>
+                <ul class="nav nav-tabs">
+                    <li>
+                        <a href="#portlet_tab2" data-toggle="tab">
+                            Tab 2
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#portlet_tab1" data-toggle="tab">
+                            Tab 1
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="portlet-body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="portlet_tab1">
+                        <h4>Tab 1 Content</h4>
+                        <p>
+                            Sipariş Adedi
+                        </p>
+                    </div>
+                    <div class="tab-pane" id="portlet_tab2">
+                        <h4>Tab 2 Content</h4>
+                        <p>
+                            Ciro
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- empty sortable porlet required for each columns! -->
+        <div class="portlet portlet-sortable-empty">
+        </div>
+    </div>
+</div>

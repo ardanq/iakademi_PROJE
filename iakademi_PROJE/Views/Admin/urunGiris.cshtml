@@ -1,0 +1,175 @@
+﻿@model iakademi_PROJE.Models.tbl_Products
+
+
+
+@{
+    ViewBag.Title = "urunGiris";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+
+    IEnumerable<SelectListItem> cl = ViewData["catlist"] as IEnumerable<SelectListItem>;
+
+    IEnumerable<SelectListItem> ml = ViewData["marlist"] as IEnumerable<SelectListItem>;
+
+
+
+}
+
+
+
+<br />
+<br />
+
+
+
+<!-- BEGIN SAMPLE FORM PORTLET-->
+<div class="portlet box purple ">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-gift"></i> ÜRÜN GİRİŞ FORMU
+        </div>
+        <div class="tools">
+            <a href="" class="collapse">
+            </a>
+            <a href="#portlet-config" data-toggle="modal" class="config">
+            </a>
+            <a href="" class="reload">
+            </a>
+            <a href="" class="remove">
+            </a>
+        </div>
+    </div>
+    <div class="portlet-body form">
+      
+        @using (Html.BeginForm("urunGiris", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal", role = "form" }))
+        {
+            <div class="form-body">
+
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">KODU</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control input-lg" name="urunkodu" required maxlength="5">
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">ADI</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control input-lg" name="productname" required maxlength="100">
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">FİYAT</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control input-lg" name="price" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">KATEGORİ SEÇİNİZ</label>
+                    <div class="col-md-9">
+                        @Html.DropDownList("categoryID", cl, "Seçiniz", new { @required = "required", @class = "form-control input-lg" })
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">MARKA SEÇİNİZ</label>
+                    <div class="col-md-9">
+                        @Html.DropDownList("supplierID", ml, "Seçiniz", new { @required = "required", @class = "form-control input-lg" })
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">STOK</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control input-lg" name="stock" required>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">İNDİRİM</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control input-lg" name="discount">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">DURUM</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control input-lg" name="status">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">ANAHTAR KELİMELER</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control input-lg" name="keywords" required>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">DESİ (HACİM)</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control input-lg" name="desidegeri" required>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">KDV</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control input-lg" name="kdv" required>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">BUNA BAKANLAR</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control input-lg" name="bunabakan" required>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">NOTLAR</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control input-lg" name="notes" required>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">RESİM SEÇ</label>
+                    <div class="col-md-9">
+                        <input type="file" class="form-control input-lg" name="fileuploader" required>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="form-actions right1">
+                <button type="button" class="btn default">Cancel</button>
+                <button type="submit" class="btn green">Submit</button>
+            </div>
+        }
+
+
+       
+    </div>
+</div>
+<!-- END SAMPLE FORM PORTLET-->
